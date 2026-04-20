@@ -12,6 +12,8 @@ func pong(pings <-chan string, pongs chan<- string) {
 func main() {
 	pongs := make(chan string)
 	pings := make(chan string)
+	defer close(pongs)
+	defer close(pings)
 	go ping(pings, "uau")
 	go pong(pings, pongs)
 	fmt.Println(<-pongs)
