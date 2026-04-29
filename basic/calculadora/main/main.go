@@ -1,6 +1,6 @@
 package main
 
-import calculadora "aprendendoGoLang/calculadora/structs"
+import calculadora "aprendendoGoLang/basic/calculadora/structs"
 
 func main() {
 	calc := &calculadora.Calculadora{}
